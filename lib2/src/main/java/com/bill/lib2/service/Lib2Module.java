@@ -9,7 +9,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class CModule {
+public class Lib2Module {
     @Singleton
     @Provides
     public WService provideWService() {

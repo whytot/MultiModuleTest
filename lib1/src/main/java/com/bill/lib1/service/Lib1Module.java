@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class XModule {
+public class Lib1Module {
     @Singleton
     @Provides
     public QService provideQService() {
