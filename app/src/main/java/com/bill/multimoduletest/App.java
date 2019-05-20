@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.bill.base.MainService;
 import com.bill.lib2.Lib2;
-import com.bill.multimoduletest.injection.DaggerAComponent;
+import com.bill.multimoduletest.injection.DaggerCommunicationComponent;
 
 public class App extends Application {
     private static final String TAG = "App";
@@ -17,7 +17,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerAComponent.create().inject(MainService.getInstance());
+        DaggerCommunicationComponent.create().inject(MainService.getInstance());
         appInstance = this;
         Lib2.getInstance().init(this);
     }

@@ -10,6 +10,5 @@ import dagger.Component;
 
 @Singleton
 @Component(modules = {Lib1Module.class, Lib2Module.class})
-public abstract class AComponent extends BaseComponent {
-
+public abstract class CommunicationComponent extends BaseComponent {
 }
