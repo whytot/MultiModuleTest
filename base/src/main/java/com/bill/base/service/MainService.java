@@ -34,16 +34,16 @@ public class MainService {
 
     public String lib1Say() {
         Log.e(TAG, otherManager.baseSay());
-        return MainServiceColleation.getInstance().getQService().say();
+        return MainServiceCollection.getInstance().getQService().say();
     }
 
     public String lib2Say() {
         Log.e(TAG, otherManager.baseSay());
-        return MainServiceColleation.getInstance().getWService().say();
+        return MainServiceCollection.getInstance().getWService().say();
     }
 
     public void lib2Do(Activity activity, int requestCode) {
         Log.e(TAG, otherManager.baseSay());
-        MainServiceColleation.getInstance().getEService().startActivityForResult(activity, requestCode);
+        MainServiceCollection.getInstance().getEService().startActivityForResult(activity, requestCode);
     }
 }
