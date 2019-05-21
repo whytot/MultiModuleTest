@@ -1,6 +1,6 @@
 package com.bill.multimoduletest.injection;
 
-import com.bill.base.service.MainServiceColleation;
+import com.bill.base.service.MainServiceCollection;
 import com.bill.lib1.service.Lib1Module;
 import com.bill.lib2.service.Lib2Module;
 
@@ -14,5 +14,5 @@ import dagger.Component;
 @Singleton
 @Component(modules = {Lib1Module.class, Lib2Module.class})
 public abstract class CommunicationComponent {
-    public abstract void inject(MainServiceColleation mainServiceColleation);
+    public abstract void inject(MainServiceCollection mainServiceColleation);
 }

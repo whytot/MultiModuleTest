@@ -11,6 +11,7 @@ import com.bill.base.service.MainService;
 import com.bill.base.OtherManager;
 import com.bill.base.injection.BaseComponent;
 import com.bill.lib1.injection.DaggerLib1Component;
+import com.bill.lib1.injection.Lib1Component;
 
 import javax.inject.Inject;
 
@@ -25,7 +26,7 @@ public class Main1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
-        DaggerLib1Component.builder().baseComponent(BaseComponent.getInstance()).build().inject(this);
+        Lib1Component.getInstance().inject(this);
         Log.e(TAG, otherManager.baseSay());
         Log.e(TAG, mainService.lib2Say());
     }
