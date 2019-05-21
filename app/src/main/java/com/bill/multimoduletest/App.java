@@ -3,8 +3,7 @@ package com.bill.multimoduletest;
 import android.app.Application;
 
 import com.bill.base.BaseLib;
-import com.bill.base.MainService;
-import com.bill.base.MainServiceColleation;
+import com.bill.base.service.MainServiceColleation;
 import com.bill.lib2.Lib2;
 import com.bill.multimoduletest.injection.DaggerCommunicationComponent;
 

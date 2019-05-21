@@ -1,7 +1,7 @@
 package com.bill.base;
 
 import com.bill.base.injection.BaseComponent;
-import com.bill.base.injection.DaggerBaseComponent;
+import com.bill.base.service.MainService;
 
 public class BaseLib {
 

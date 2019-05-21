@@ -1,4 +1,4 @@
-package com.bill.base;
+package com.bill.base.service;
 
 import android.app.Activity;
 import android.content.Context;

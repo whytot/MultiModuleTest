@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.bill.base.MainService;
+import com.bill.base.service.MainService;
 
 public class Main2Activity extends AppCompatActivity {
     private static final String TAG = "Main2";

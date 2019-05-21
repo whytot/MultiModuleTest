@@ -1,7 +1,9 @@
-package com.bill.base;
+package com.bill.base.service;
 
 import android.app.Activity;
 import android.util.Log;
+
+import com.bill.base.OtherManager;
 
 import javax.inject.Inject;
 

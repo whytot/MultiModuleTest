@@ -1,6 +1,6 @@
 package com.bill.lib1.service;
 
-import com.bill.base.QService;
+import com.bill.base.service.QService;
 
 import javax.inject.Singleton;
 

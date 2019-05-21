@@ -1,6 +1,6 @@
 package com.bill.lib2.service;
 
-import com.bill.base.WService;
+import com.bill.base.service.WService;
 
 public class WServiceImpl implements WService {
     @Override

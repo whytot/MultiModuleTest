@@ -1,7 +1,7 @@
 package com.bill.lib2.service;
 
-import com.bill.base.EService;
-import com.bill.base.WService;
+import com.bill.base.service.EService;
+import com.bill.base.service.WService;
 
 import javax.inject.Singleton;
 

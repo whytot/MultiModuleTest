@@ -1,6 +1,6 @@
 package com.bill.multimoduletest.injection;
 
-import com.bill.base.MainServiceColleation;
+import com.bill.base.service.MainServiceColleation;
 import com.bill.lib1.service.Lib1Module;
 import com.bill.lib2.service.Lib2Module;
 

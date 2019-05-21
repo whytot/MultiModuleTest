@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 
-import com.bill.base.EService;
+import com.bill.base.service.EService;
 import com.bill.lib2.Lib2;
 import com.bill.lib2.Main2Activity;
 

@@ -1,7 +1,6 @@
 package com.bill.base.injection;
 
-import com.bill.base.MainService;
-import com.bill.base.MainServiceColleation;
+import com.bill.base.service.MainService;
 import com.bill.base.OtherManager;
 
 import dagger.Component;
