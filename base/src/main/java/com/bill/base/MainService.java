@@ -1,6 +1,7 @@
 package com.bill.base;
 
 import android.app.Activity;
+import android.util.Log;
 
 import javax.inject.Inject;
 
@@ -10,6 +11,8 @@ import javax.inject.Inject;
  * 不在直接被通信组件注入，而是持有一个所有服务的集合
  */
 public class MainService {
+
+    private static final String TAG = "MainService";
 
     private static class InstanceHolder {
         private static MainService INSTANCE = new MainService();
@@ -24,17 +27,17 @@ public class MainService {
 
 
     public String lib1Say() {
-        otherManager.baseSay();
+        Log.e(TAG, otherManager.baseSay());
         return MainServiceColleation.getInstance().getQService().say();
     }
 
     public String lib2Say() {
-        otherManager.baseSay();
+        Log.e(TAG, otherManager.baseSay());
         return MainServiceColleation.getInstance().getWService().say();
     }
 
     public void lib2Do(Activity activity, int requestCode) {
-        otherManager.baseSay();
+        Log.e(TAG, otherManager.baseSay());
         MainServiceColleation.getInstance().getEService().startActivityForResult(activity, requestCode);
     }
 }

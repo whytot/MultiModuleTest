@@ -24,7 +24,7 @@ public class Main1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
         DaggerLib1Component.builder().baseComponent(BaseComponent.getInstance()).build().inject(this);
-        otherManager.baseSay();
+        Log.e(TAG, otherManager.baseSay());
         Log.e(TAG, MainService.getInstance().lib2Say());
     }
 
