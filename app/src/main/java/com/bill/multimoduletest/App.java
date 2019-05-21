@@ -2,7 +2,9 @@ package com.bill.multimoduletest;
 
 import android.app.Application;
 
+import com.bill.base.BaseLib;
 import com.bill.base.MainService;
+import com.bill.base.MainServiceColleation;
 import com.bill.lib2.Lib2;
 import com.bill.multimoduletest.injection.DaggerCommunicationComponent;
 
@@ -17,8 +19,9 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerCommunicationComponent.create().inject(MainService.getInstance());
+        DaggerCommunicationComponent.create().inject(MainServiceColleation.getInstance());
         appInstance = this;
         Lib2.getInstance().init(this);
+        BaseLib.getInstance().init();
     }
 }

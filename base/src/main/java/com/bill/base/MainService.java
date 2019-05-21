@@ -4,8 +4,11 @@ import android.app.Activity;
 
 import javax.inject.Inject;
 
-import dagger.Lazy;
-
+/**
+ * 总服务
+ * <p>
+ * 不在直接被通信组件注入，而是持有一个所有服务的集合
+ */
 public class MainService {
 
     private static class InstanceHolder {
@@ -17,23 +20,21 @@ public class MainService {
     }
 
     @Inject
-    Lazy<QService> qService;
+    OtherManager otherManager;
+
 
     public String lib1Say() {
-        return qService.get().say();
+        otherManager.baseSay();
+        return MainServiceColleation.getInstance().getQService().say();
     }
-
-    @Inject
-    Lazy<WService> wService;
 
     public String lib2Say() {
-        return wService.get().say();
+        otherManager.baseSay();
+        return MainServiceColleation.getInstance().getWService().say();
     }
 
-    @Inject
-    Lazy<EService> eService;
-
     public void lib2Do(Activity activity, int requestCode) {
-        eService.get().startActivityForResult(activity, requestCode);
+        otherManager.baseSay();
+        MainServiceColleation.getInstance().getEService().startActivityForResult(activity, requestCode);
     }
 }

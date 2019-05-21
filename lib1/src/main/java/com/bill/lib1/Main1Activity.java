@@ -8,14 +8,23 @@ import android.util.Log;
 import android.view.View;
 
 import com.bill.base.MainService;
+import com.bill.base.OtherManager;
+import com.bill.base.injection.BaseComponent;
+import com.bill.lib1.injection.DaggerLib1Component;
+
+import javax.inject.Inject;
 
 public class Main1Activity extends AppCompatActivity {
     private static final String TAG = "Main1";
+    @Inject
+    OtherManager otherManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
+        DaggerLib1Component.builder().baseComponent(BaseComponent.getInstance()).build().inject(this);
+        otherManager.baseSay();
         Log.e(TAG, MainService.getInstance().lib2Say());
     }
 
