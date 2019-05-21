@@ -16,15 +16,19 @@ public class MainService {
 
     private static final String TAG = "MainService";
 
-    private static class InstanceHolder {
-        private static MainService INSTANCE = new MainService();
-    }
-
-    public static MainService getInstance() {
-        return MainService.InstanceHolder.INSTANCE;
-    }
+//    private static class InstanceHolder {
+//        private static MainService INSTANCE = new MainService();
+//    }
+//
+//    public static MainService getInstance() {
+//        return MainService.InstanceHolder.INSTANCE;
+//    }
 
     @Inject
+    public MainService(OtherManager otherManager) {
+        this.otherManager = otherManager;
+    }
+
     OtherManager otherManager;
 
 

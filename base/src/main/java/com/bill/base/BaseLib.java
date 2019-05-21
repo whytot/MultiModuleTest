@@ -3,6 +3,8 @@ package com.bill.base;
 import com.bill.base.injection.BaseComponent;
 import com.bill.base.service.MainService;
 
+import javax.inject.Inject;
+
 public class BaseLib {
 
     private static class InstanceHolder {
@@ -13,7 +15,11 @@ public class BaseLib {
         return BaseLib.InstanceHolder.INSTANCE;
     }
 
+    @Inject
+    MainService mainService;
+
     public void init() {
-        BaseComponent.getInstance().inject(MainService.getInstance());
+        BaseComponent.getInstance().inject(this);
+        BaseComponent.getInstance().inject(mainService);
     }
 }

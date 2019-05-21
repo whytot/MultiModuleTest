@@ -1,5 +1,6 @@
 package com.bill.base.injection;
 
+import com.bill.base.BaseLib;
 import com.bill.base.service.MainService;
 import com.bill.base.OtherManager;
 
@@ -17,7 +18,11 @@ public abstract class BaseComponent {
         return BaseComponent.InstanceHolder.INSTANCE;
     }
 
+    public abstract void inject(BaseLib baseLib);
+
     public abstract void inject(MainService mainService);
 
     public abstract OtherManager getOtherManager();
+
+    public abstract MainService getMainService();
 }

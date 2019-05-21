@@ -18,6 +18,8 @@ public class Main1Activity extends AppCompatActivity {
     private static final String TAG = "Main1";
     @Inject
     OtherManager otherManager;
+    @Inject
+    MainService mainService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +27,11 @@ public class Main1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main1);
         DaggerLib1Component.builder().baseComponent(BaseComponent.getInstance()).build().inject(this);
         Log.e(TAG, otherManager.baseSay());
-        Log.e(TAG, MainService.getInstance().lib2Say());
+        Log.e(TAG, mainService.lib2Say());
     }
 
     public void onClick1(View view) {
-        MainService.getInstance().lib2Do(this, 1111);
+        mainService.lib2Do(this, 1111);
     }
 
     @Override
