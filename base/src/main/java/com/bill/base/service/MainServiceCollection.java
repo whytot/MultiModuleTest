@@ -1,5 +1,7 @@
 package com.bill.base.service;
 
+import com.bill.multi.annotation.MutliInject;
+
 import javax.inject.Inject;
 
 import dagger.Lazy;
@@ -9,6 +11,7 @@ import dagger.Lazy;
  * <p>
  * 所有服务和总服务的中间层，由于这一层提供的服务都是懒加载，所以直接提供单例影响不大
  */
+@MutliInject
 public class MainServiceCollection {
 
     private static class InstanceHolder {

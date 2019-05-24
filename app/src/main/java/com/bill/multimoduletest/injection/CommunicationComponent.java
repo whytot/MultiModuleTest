@@ -12,7 +12,7 @@ import dagger.Component;
 /**
  * CommunicationComponent 不在依赖BaseComponent
  */
-@IServiceScope
+@Singleton
 @Component(modules = {Lib1Module.class, Lib2Module.class})
 public abstract class CommunicationComponent {
     public abstract void inject(MainServiceCollection mainServiceColleation);

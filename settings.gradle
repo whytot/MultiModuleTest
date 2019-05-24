@@ -1,1 +1,1 @@
-include ':app', ':base', ':lib1', ':lib2'
+include ':app', ':base', ':lib1', ':lib2', ':multiCompiler'

@@ -7,10 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-import com.bill.base.service.MainService;
 import com.bill.base.OtherManager;
-import com.bill.base.injection.BaseComponent;
-import com.bill.lib1.injection.DaggerLib1Component;
+import com.bill.base.service.MainService;
 import com.bill.lib1.injection.Lib1Component;
 
 import javax.inject.Inject;
