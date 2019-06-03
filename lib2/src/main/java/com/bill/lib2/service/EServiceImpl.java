@@ -10,7 +10,7 @@ import com.bill.base.service.EService;
 import com.bill.lib2.Lib2;
 import com.bill.lib2.Main2Activity;
 
-public class EServiceImpl implements EService {
+public class EServiceImpl extends EService {
     /**
      * context: application
      */

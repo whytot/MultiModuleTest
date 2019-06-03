@@ -1,5 +1,8 @@
 package com.bill.base.service;
 
-public interface WService {
-    String say();
+import com.bill.multi.annotation.MultiService;
+
+@MultiService
+public abstract class WService {
+    public abstract String say();
 }

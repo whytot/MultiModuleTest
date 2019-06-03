@@ -11,7 +11,7 @@ import javax.inject.Inject;
 /**
  * 被注入其他依赖
  */
-public class QServiceImpl implements QService {
+public class QServiceImpl extends QService {
     private static final String TAG = "QServiceImpl";
     @Inject
     Lib1Manager lib1Manager;

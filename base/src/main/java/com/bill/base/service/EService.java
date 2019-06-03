@@ -1,13 +1,15 @@
 package com.bill.base.service;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.annotation.NonNull;
 
-public interface EService {
-    void startActivity();
+import com.bill.multi.annotation.MultiService;
 
-    void startActivity(@NonNull Activity activity);
+@MultiService
+public abstract class EService {
+    public abstract void startActivity();
 
-    void startActivityForResult(@NonNull Activity activity, int requestCode);
+    public abstract void startActivity(@NonNull Activity activity);
+
+    public abstract void startActivityForResult(@NonNull Activity activity, int requestCode);
 }

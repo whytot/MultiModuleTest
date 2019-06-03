@@ -1,5 +1,8 @@
 package com.bill.base.service;
 
-public interface QService {
-    String say();
+import com.bill.multi.annotation.MultiService;
+
+@MultiService
+public abstract class QService {
+    public abstract String say();
 }
